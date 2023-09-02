@@ -20,59 +20,59 @@
 [ Pseudocode ]
 
 Function PrimeNumber(x)
-    Prime = []
-    For i in range(1, x+1)
-        Count = 0
+    Prime ← []
+    For i ← 1 to x
+        Count ← 0
         If i == 1
             Continue
-        For j in range(1, x+1)
+        For j ← 1 to x
             If i % j == 0
-                Count = Count + 1
+                Count ← Count + 1
         If Count == 2
             Append i to Prime
     Return Prime
 EndFunction
 
-Function PrimeFactor(x)
-    Factors = {}
+Function PrimeFactor(x, prime_numbers)
+    Factors ← {}
 
-    For i in PrimeNumbers
-        Count = 0
+    For i in prime_numbers
+        Count ← 0
         While x % i == 0
-            x = x / i
-            Count = Count + 1
-            Factors[i] = Count
+            x ← x / i
+            Count ← Count + 1
+            Factors[i] ← Count
     Return Factors
 EndFunction
 
 Function KPK(x, y)
-    Result = {}
+    Result ← {}
     For i in x
         For j in y
             If i == j
                 If x.Get(i) > y.Get(j)
-                    Result[i] = x.Get(i)
+                    Result[i] ← x.Get(i)
                 Elif x.Get(i) < y.Get(j)
-                    Result[j] = y.Get(j)
+                    Result[j] ← y.Get(j)
                 Elif x.Get(i) == y.Get(j)
-                    Result[i] = x.Get(i)
+                    Result[i] ← x.Get(i)
             Else
                 If i in Result And Result.Get(i) > x.Get(i)
                     Continue
                 Elif j in Result And Result.Get(j) > y.Get(j)
                     Continue
                 Else
-                    Result[i] = x.Get(i)
-                    Result[j] = y.Get(j)
+                    Result[i] ← x.Get(i)
+                    Result[j] ← y.Get(j)
     Return Result
 EndFunction
 
-x = Input("Masukkan angka pertama(1-50): ")
-y = Input("Masukkan angka kedua(1-50): ")
+x ← 3
+y ← 4
 
-PrimeNumbers = PrimeNumber(50)
-FirstPrimeFactor = PrimeFactor(x)
-SecondPrimeFactor = PrimeFactor(y)
+PrimeNumbers ← PrimeNumber(20)
+FirstPrimeFactor ← PrimeFactor(x, PrimeNumbers)
+SecondPrimeFactor ← PrimeFactor(y, PrimeNumbers)
 
 Print(FirstPrimeFactor)
 Print(SecondPrimeFactor)
@@ -80,10 +80,10 @@ Print(SecondPrimeFactor)
 Print()
 Print(KPK(FirstPrimeFactor, SecondPrimeFactor))
 
-PrimeKPK = KPK(FirstPrimeFactor, SecondPrimeFactor)
-ResultKPK = 1
+PrimeKPK ← KPK(FirstPrimeFactor, SecondPrimeFactor)
+ResultKPK ← 1
 For i in PrimeKPK
-    ResultKPK = ResultKPK * i ^ PrimeKPK.Get(i)
+    ResultKPK ← ResultKPK * i ^ PrimeKPK.Get(i)
 EndFor
 
 Print()
@@ -140,10 +140,10 @@ def kpk(x, y):
     return result
 
 
-x = int(input("Masukkan angka pertama(1-50): "))
-y = int(input("Masukkan angka kedua(1-50): "))
+x = 3
+y = 4
 
-prime_numbers = prime_number(50)
+prime_numbers = prime_number(20)
 first_prime_factor = prime_factor(x)
 second_prime_factor = prime_factor(y)
 
