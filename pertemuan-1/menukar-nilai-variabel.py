@@ -1,4 +1,7 @@
+# Menukar Nilai Variabel
+
 """
+
 [ Algoritma ]
 
 1. Membuat tiga variabel (x, y, z) yang berfungsi sebagai piring.
@@ -56,23 +59,23 @@ print(f"Piring 3: {z}")
 
 
 def menukar_posisi(x, y, z):
-	z = x
-	x = ""
+    z = x
+    x = ""
 
-	print()
-	print("[ Proses ]")
-	print(f"Piring 1: {x}")
-	print(f"Piring 2: {y}")
-	print(f"Piring 3: {z}")
+    print()
+    print("[ Proses ]")
+    print(f"Piring 1: {x}")
+    print(f"Piring 2: {y}")
+    print(f"Piring 3: {z}")
 
-	x = y
-	y = z
-	z = ""
-	print()
-	print("[ Setelah Ditukar ]")
-	print(f"Piring 1: {x}")
-	print(f"Piring 2: {y}")
-	print(f"Piring 3: {z}")
+    x = y
+    y = z
+    z = ""
+    print()
+    print("[ Setelah Ditukar ]")
+    print(f"Piring 1: {x}")
+    print(f"Piring 2: {y}")
+    print(f"Piring 3: {z}")
 
 
 menukar_posisi(x, y, z)
